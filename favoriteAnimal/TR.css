@@ -1,0 +1,60 @@
+body{
+	font-size:25px;
+
+	font-family:Comic Sans MS;
+	text-align: center;
+	background-color: #E1E7EB;
+	color: black;
+
+
+}
+
+
+h1{
+	font-size:50px;
+	color: #4E0E2E;
+
+
+}
+
+h2{
+	font-size: 33px;
+	color: #9EA8B3;
+	text-shadow: 2px 0px 1px black;
+}
+
+.hl{
+	color: #B45B69;
+
+}
+
+
+.g1 {
+	border:  3px solid black;
+}
+
+
+
+.blank {
+	background-color: #FFFFFF;
+}
+
+.st{
+	font-size: 20px;
+}
+
+
+.imgcr{
+	font-size: 15px;
+
+}
+
+
+footer{
+	text-align: right;
+	font-size: 20px;
+}
+
+
+
+
