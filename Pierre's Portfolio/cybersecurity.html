@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<!-- This is the head of the html file, which defines the meta, data, title and a link to the css file that stylizes my whole webpage-->
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="portf.css">
+	<title>Cybersecurity</title>
+</head>
+
+<!-- The body section starts from here. Here I use a style attribute for background color in the body, just in case it is misinterpreted in the whole html file-->
+<body style="background-color:#3F2860;">
+
+	<!-- This division defines a region with the styles for title 1 and title 2-->
+	<div class="title_region">
+		<!-- This is the largest title of the webpage, in the style of "title_1"-->
+		<h1 class="title_1">Introduction to Cybersecurity</h1>
+
+		<!-- These are two sub-titles of the webpage, in the style of "title_2" -->
+		<h2 class="title_2">Three Most Vulnerable WEB Errors: SQL injection, XSS and Insecure File Uploads</h2>
+		<h2 class="title_2">-- By Pi3rre, May 24, 2023</h2>
+	</div>
+
+	<br>
+	<br>
+	<br>
+
+	<!-- Seciton 1: introduction to sql injection -->
+	<div class="text_region">
+
+		<!-- a subtitle in the style of "subtitle" -->
+		<h3 class="subtitle">SQL INJECTION</h3>
+
+		<!-- paragraph -->
+		<p class="general_text">Imagine, you are now running a <strong>bank</strong>. You let people in your bank for <strong>checking how much money is in their account, saving and withdrawing money</strong>. However, one day you let a weird guy come in, he literally goes towards your safe and <strong style="color:red">takes all the money in your bank.</strong> How can this happen?</p>
+
+		<!-- paragraph -->
+		<p class="general_text">SQL, which stands for <strong>"Structured Query Language,"</strong> is used for operation <strong>databases</strong>. When users can <strong style="color:red">structure appropriate SQL codes to the database</strong> in the <strong>server</strong> (such as, "show/delete/modify all the usernames and passwords") and <strong style="color:red">perform the SQL code successfully</strong> as a <strong>client</strong>, SQL injection happens, giving the clients unexpected authority to operate database. </p>
+
+		<!-- paragraph -->
+		<p class="general_text">SQL injection happens so common: there is a chance to trigger this vulnerability in a username / password input form in a few websites (if you are inputing a SQL code as your username and this gets interpreted in the server, <strong style="color:red">HEY, DON'T DO THAT ON PURPOSE</strong>). So... how can we prevent that? The best strategies that web designers apply are <strong>filtering SQL key words and punctuations, such as a "="</strong>. </p>
+
+		<!-- a link to more sql injection information -->
+		<a href="https://www.w3schools.com/sql/sql_injection.asp" target="_blank"><p class="general_text">Learn more about SQL injection? Click here</p></a>
+	
+		<br>
+		<br>
+
+	</div>
+
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+	<!-- Seciton 2: introduction to xss -->
+	<div class="text_region">
+		<!-- a subtitle in the style of "subtitle" -->
+		<h3 class="subtitle">CROSS SITE SCRIPTING</h3>
+
+		<!-- an image floating at the right section and in appropriate size, for decoration -->
+		<img src="./Pictures/XSS.png" width="350px" height="320px" style="float:right; margin: 40px;">
+
+		<!-- paragraph -->
+		<p class="general_text">Interestingly, "CSS" should be given as a name of <strong>cross site scripting</strong> as well. Since we already have "CSS" for our <strong>cascading style sheets</strong>, let's just call it "XSS."</p>
+
+		<!-- paragraph -->
+		<p class="general_text">XSS happens when attackers <strong style="color:red">inject scripts (such as javascript) into the webpage and causes the leak of data (such as <strong>cookie</strong>) of others</strong> who are accessing the webpage as well. Don't get me wrong, "cookie" here does not refer to the real edible cookie, instead it is a piece of data stored in the client side. This data creates convinience such that you don't have to type your password on cetain webpage every time.</p>
+
+		<!-- paragraph -->
+		<p class="general_text">However, attackers may use some tools called <strong style="color:red">XSS platforms (it's usually another programmed website)</strong> to steal your cookie, therefore the attackers can have everything YOU HAVE in this website. Giving a real example, if a XSS script goes into the <strong style="color:red">log</strong> of a website and a <strong style="color:red">logged-in administrator</strong> is checking out the what messes are there in the log, something awful will happen: the XSS script in the log re-directs the administrator to the XSS platform, during this unexpected visiting, the cookie of the administrator will be automatically stolen and stored by the XSS platform. Once the cookie, including the administrator's password and username, is leaked, the highest authority of the website can be accessed by the attackers.</p>
+
+		<!-- paragraph -->
+		<p class="general_text">To avoid XSS, don't easily let the users input <strong>"<>"</strong> into your webpage, and frequently checks somewhere that can store data  (such as the <strong>log</strong>)! Also, since lots of people use existing <strong>CMS (contents management system)</strong> to save the time instead of making their own websites and functions, don't forget to check what're some existing vulnerabilities of the CMS that you're using!</p>
+
+		<!-- a link to more xss information -->
+		<a href="https://www.synopsys.com/glossary/what-is-cross-site-scripting.html" target="_blank"><p class="general_text">Learn more about XSS? Click here</p></a>	
+
+		<br>
+		<br>
+
+	</div>
+
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+	<!-- Seciton 3: introduction to insecure file uploads -->
+	<div class="text_region">
+		<!-- a subtitle in the style of "subtitle" -->
+		<h3 class="subtitle">INSECURE FILE UPLOADS</h3>
+
+		<!-- paragraph -->
+		<p class="general_text">What if... after you make a website, allowing everyone to upload their birthday videos, and I upload something special so that your website only plays my birthday video? Some files might be extremely dangerous for websites, such as a <strong>".php"</strong> file, which might be a <strong style="color:red">Trojan Horse virus</strong>. Let me show you how this vulnerability works: </p> 
+
+		<!-- a centered image displaying a malicious code of insecure file uploads -->	
+		<center><img src="./Pictures/trojan.png"></center>
+
+		<!-- paragraph -->
+		<p class="general_text">The code above is a typical php virus script, let's say if this code is put into a file called "trojan.png" and I can somehow <strong style="color:red">upload this ".php" file to a website, and access to this "php" file with the following URL in a search bar:</strong> 
+
+		<!-- a centered image displays URL that exploits the trojan file -->	
+		<center><img src="./Pictures/trojan2.png"></center>
+
+		<!-- paragraph -->	
+		<p class="general_text">Then, I can performing the command <strong> "phpinfo()"</strong> in the website <strong style="color:red"> as a client</strong>, which should never happen in your website!!!!! Although the command "phpinfo()" only shows some basic information of php setups in one's website, you can imagine there're more crazy commands are waiting to be performed on your website <strong>if anything can be uploaded</strong>.</p>
+
+		<!-- paragraph -->
+		<p class="general_text">Some strategies for defending insecure file uploads. First, you may filter file extensions (suffix of the file, such as ".png"), making a <strong>black list or white list for different file extensions</strong>. For example, if you only want people to upload videos, then only allow ".mp4" ".avi" files, or deny anything ends with ".php" ".asp" and other <strong>scripting file extensions</strong>. Setting up an <strong>anti-virus software / application</strong> in your website is also a wise decision! </p>
+
+		<!-- a link to more insecure file uploading information -->
+		<a href="https://portswigger.net/web-security/file-upload" target="_blank"><p class="general_text">Learn more about insecure file uploads? Click here</p></a>
+
+	</div>
+
+	<br>
+	<br>
+	<br>
+
+
+</body>
+</html>

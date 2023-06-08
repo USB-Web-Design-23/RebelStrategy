@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+
+<!-- This is the head of the html file, which defines the meta, data, title and a link to the css file that stylizes my whole webpage-->
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="portf.css">
+	<title>Pierre's Portfolio</title>
+</head>
+
+
+<!-- The body section starts from here. Here I use a style attribute for background color in the body, just in case it is misinterpreted in the whole html file-->
+<body style="background-color:#3F2860;">
+
+	<!-- This division defines a region with the styles for title 1 and title 2-->
+	<div class="title_region">
+
+		<!-- This is the largest title of the webpage, in the style of "title_1"-->
+		<h1 class="title_1">Pierre's Portfolio</h1>
+
+		<!-- This is the sub-title of the webpage, in the style of "title_2"-->
+		<h2 class="title_2">Welcome to My WEB Design Exhibition!</h2>
+	</div>
+	
+	<br>
+	<br>
+
+
+	<!-- This division is a dropdown menu uses javascript and helps user browse and switch through different webpages in my portfolio -->
+	<div class="dropdown">
+		<!-- This is an orange button that displays all the dropdown menu contents when it is hovered-->
+	  	<button class="dropbutton">Menu</button>
+
+	  	<!-- The following dropdown contents call the javascript to change the href of the embedding label, thus makes it display a different webpage in the portfolio -->
+	  	<div class="dropdown-content">
+	    	<a onclick = "embed_instance.rd()">Reocurring Dream</a>
+	    	<a onclick = "embed_instance.am()">About Me</a>
+	    	<a onclick = "embed_instance.fa()">Favorite Animal</a>
+	    	<a onclick = "embed_instance.cfa()">Call for Environmental Action</a>
+	    	<a onclick = "embed_instance.cg()">Collector's Guide on Music</a>
+	    	<a onclick = "embed_instance.pnw()">Introduction to Pacific Northwest</a>
+	    	<a onclick = "embed_instance.bq()">Anime Buzzfeed Quiz</a>
+	  	</div>
+	</div>	
+	<br>
+	<br>
+
+	<!-- This is a centered window that displays embeded html files of all the projects that I have done this year; The default file displayed is "Reoccuring Dream"-->
+	<center><embed id = "emb" type="text/html" src="./reocurringDream/text.html" class="emb"></center>
+
+	<br>
+	<br>
+
+	<!-- The following chunks of text will be displayed when their corresponding html file is displayed in the embed element in the portfolio-->
+	<center>
+
+		<!-- This is the text for "Reocurring Dream (rd)"-->
+		<div class="emb_text" id="rd">
+			<p class="general_text">"Victorian Rhapsody" was a reoccuring dream that I had in September of 2022. This is <strong>first</strong> html file that I have ever written in my life. In this webpage, I shared a dream that I went to <strong>Victoria, Australia</strong> in 2021 to see a friend of mine. She showed me around the neighborhood and the downtown, telling me what's going on with her in last two years. I can still remember we used to write letters to each other in the middle school, and interestingly this person jumps upon my dream one night... Maybe I should visit there in my real life.</p>
+		</div>
+
+		<!-- This is the text for "About Me (am)" -->
+		<div class="emb_text" id="am" style="display: none;">
+			<p class="general_text"> About Me! In this project I introduced myself in three sections: my academic passion, my athletic interests and the music that I like. I learned how to insert <strong>images and videos</strong> in this project, as well as using <strong>the list element</strong>.</p>
+		</div>	
+
+		<!-- This is the text for "Favorite Animal (fa)" -->
+		<div class="emb_text" id="fa" style="display: none;">
+			<p class="general_text"> My favorite animals are <strong>tarantulas</strong>, which, I used to pet. Once I wanted to have a pet dog or cat in my house, mom refused to that. Instead, I start to pet tarantulas that are easier to feed and nest. They are really cool animals! This webpage shares the information that I learn from petting tarantulas. I learned how to write a <strong>CSS file</strong>, the "Cascading Style Sheet" for setting up some universal styles in my webpage.</p>
+		</div>
+
+		<!-- This is the text for "Call for Environmental Action (cfa)" -->
+		<div class="emb_text" id="cfa" style="display: none;">
+			<p class="general_text"> In this project, I did some researches on some of the vital problems that polar bears are facing. The primary motivation is that I have heard the glacier size, which is the homeland of polar bears, has been drastically decreasing due to global warming. Therefore, I looked up more detailed information on this topic then called for the an environmental action for polar bears in this webpage. I also learned how to use <strong>a-label</strong>, which are <strong>links to online webpages or other local files</strong>, enabling me to share a little more online source to my readers.</p>
+		</div>
+
+		<!-- This is the text for "Collector's Guide (cg)" -->
+		<div class="emb_text" id="cg" style="display: none;">
+			<p class="general_text"> In the Collector's Guide, I partnered with Asa and we did a collection of music in different genres. We finished all our html works first, then we created a CSS file together. This can be an efficient teamwork strategy that I think is worthy pointing out. This time, I learned to <strong>use a-labels to link different local html files</strong>.</p>
+		</div>
+
+		<!-- This is the text for "Pacific Northwest (pnw)" -->
+		<div class="emb_text" id="pnw" style="display: none;">
+			<p class="general_text">The Pacific Northwest, also known as Astoria, is where I live and go for high schools. The weather here is cool all the time in a year, therefore there're a variety of activities created due to the whether, such as skiing. In the project I introduced a few places worthy visiting and some activities worthy trying. I learned more about where I live. On the perspective of, WEB design, I learn how to define <strong>keyframes</strong> and thus generate <strong>animation</strong> in my webpages.</p>
+		</div>	
+
+		<!-- This is the text for "Buzzfeed Quiz (bq)" -->
+		<div class="emb_text" id="bq" style="display: none;">
+			<p class="general_text">Buzzfeed Quiz is the last project I have in this year, I this project I learned how to write <strong>javascript</strong> in a html file. I partnered with Jerry this time, and we strategically distributed our works, and therefore we could fluently complete this project. The theme <strong>anime</strong> is something shared between I and Jerry, and we were both passionate when we were doing this project.</p>
+		</div>	
+	</center>
+
+
+	<br>
+
+
+</body>
+
+<!-- This sections define all the functions (in javascript) used by the buttons in this webpage -->
+<script type="text/javascript">
+
+	//This function hides (refresh) all the texts for explaining embeded files, by changing the style.display attribute to "none"; variable t gets all seven different ids from the text chunks, then set the style.display to "none."
+	function refresh_text(){
+		var t = document.getElementById("rd"); 
+		t.style.display = "none";
+		var t = document.getElementById("am");
+		t.style.display = "none";
+		var t = document.getElementById("fa");
+		t.style.display = "none";
+		var t = document.getElementById("cfa");
+		t.style.display = "none";
+		var t = document.getElementById("cg");
+		t.style.display = "none";
+		var t = document.getElementById("pnw");
+		t.style.display = "none";
+		var t = document.getElementById("bq");
+		t.style.display = "none";
+
+	}
+	
+/* This is a list of the absolute address of all the files displayed in the portfolio
+./reocurringDream/text.html
+./aboutMe/aboutMe.html
+./favoriteAnimal/Tarantula.html
+./callForAction2/Env.html
+./Collector's Guide -Finished/main.html
+./PNW/Intro to Pacific NW.html
+./Buzzfeed-final/main.html
+*/
+
+	//Create a class for embed element
+	class Embed {
+		//The constructor method receives the id of DOM of the embed element
+	  	constructor(emb_id) {
+	    	this.id = emb_id;    	
+	  	}
+
+	  	//The seven following functions in the class are used for switching the html file that is displayed
+		rd(){
+			//Switch the html file loaded in the embed element to: "Reoccuring Dream (rd)"
+	  		var e = document.getElementById(this.id);
+	  		e.src = "./reocurringDream/text.html";
+
+	  		//Hide all the text, then display the text for "Reocurring Dream (rd)" only
+	  		refresh_text();
+			var t = document.getElementById("rd");
+			t.style.display = "block";
+	  	}
+
+		am(){
+			//Switch the html file loaded in the embed element to: "About Me (am)"
+	  		var e = document.getElementById(this.id);
+	  		e.src = "./aboutMe/aboutMe.html";
+
+	  		//Hide all the text, then display the text for "About Me (am)" only
+	  		refresh_text();
+			var t = document.getElementById("am");
+			t.style.display = "block";
+	  	}
+
+		fa(){
+			//Switch the html file loaded in the embed element to: "Favorite Animal (fa)"
+	  		var e = document.getElementById(this.id);
+	  		e.src = "./favoriteAnimal/Tarantula.html";
+
+	  		//Hide all the text, then display the text for "Favorite Animal (fa)" only
+	  		refresh_text();
+			var t = document.getElementById("fa");
+			t.style.display = "block";
+	  	}
+
+		cfa(){
+			//Switch the html file loaded in the embed element to: "Call for Environmental Action (cfa)"
+	  		var e = document.getElementById(this.id);
+	  		e.src = "./callForAction2/Env.html";
+
+	  		//Hide all the text, then display the text for "Call for Environmental Action (cfa)" only
+	  		refresh_text();
+			var t = document.getElementById("cfa");
+			t.style.display = "block";
+	  	}
+
+		cg(){
+			//Switch the html file loaded in the embed element to: "About Me (am)"
+	  		var e = document.getElementById(this.id);
+	  		e.src = "./Collector's Guide -Finished/main.html";
+
+	  		//Hide all the text, then display the text for "About Me (am)" only
+	  		refresh_text();
+			var t = document.getElementById("cg");
+			t.style.display = "block";
+	  	}
+
+		pnw(){
+			//Switch the html file loaded in the embed element to: "Favorite Animal (fa)"
+	  		var e = document.getElementById(this.id);
+	  		e.src = "./PNW/Intro to Pacific NW.html";
+
+	  		//Hide all the text, then display the text for "Favorite Animal (fa)" only
+	  		refresh_text();
+			var t = document.getElementById("pnw");
+			t.style.display = "block";
+	  	}
+
+		bq(){
+			//Switch the html file loaded in the embed element to: "Call for Environmental Action (cfa)"
+	  		var e = document.getElementById(this.id);
+	  		e.src = "./Buzzfeed-final/main.html";
+
+	  		//Hide all the text, then display the text for "Call for Environmental Action (cfa)" only
+	  		refresh_text();
+			var t = document.getElementById("bq");
+			t.style.display = "block";
+	  	}
+
+	} //The defining of the class stops here
+
+	//Create an instance of the embed class that can use all the functions to switch the file displayed in the portfolio.
+	const embed_instance = new Embed("emb"); //need "id" of the embed label as the only attribute
+
+</script>
+
+</html>

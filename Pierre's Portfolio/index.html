@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<!-- This is the head of the html file, which defines the meta, data, title and a link to the css file that stylizes my whole webpage-->
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="portf.css">
+	<title>Main Page - Pierre's Portfolio</title>
+</head>
+
+
+<!-- The body section starts from here. Here I use a style attribute for background color in the body, just in case it is misinterpreted in the whole html file-->
+<body style="background-color:#3F2860;">
+
+	<!-- This division defines a region with the styles for title 1 and title 2-->
+	<div class="title_region">
+
+		<!-- This is the largest title of the webpage, in the style of "title_1"-->
+		<h1 class="title_1">Pierre's Portfolio</h1>
+
+		<!-- This is the sub-title of the webpage, in the style of "title_2"-->
+		<h2 class="title_2">WEB DESIGN 2022-2023</h2>
+	</div>
+
+	<br>
+	<br>
+	<br>
+
+	<!-- This division contains 4 different buttons for navigation; using the style of "text_region" -->
+	<div class="text_region">
+		<br>
+		<br>
+		<br>
+
+		<!-- This is a centered button opening the REAL portfolio page -->
+		<center><a href="portfolio.html" target="_blank"><button class="home_button">PORTFOLIO</button></a></center>
+
+		<br>
+		<br>
+
+		<!-- This is a centered button opening another webpage that introduces three vulnerabilities in web designing -->
+		<center><a href="cybersecurity.html" target="_blank"><button class="home_button">INTRODUTION TO CYBERSECURITY</button></a></center>
+
+		<br>
+		<br>
+		<!-- This button displays the feedback block that is originally hidden -->
+		<center><a><button class="home_button" onclick="Feedback()">FEEDBACK</button></a></center>
+
+		<br>
+		<br>
+
+		<!-- This button displays the reference block that is originally hidden -->
+		<center><a><button class="home_button" onclick="Reference()">REFERENCE</button></a></center>
+
+		<br>
+		<br>
+		<br>
+	</div>
+
+	<br>
+	<br>
+
+
+
+	<!-- This division is a default hidden block for reference. When the "reference" button is clicked, this region will be shown -->
+	<div class="text_region" id="ref_block" style="display: none;">
+
+		<!-- Using "subtitle" class for the title of the reference list -->
+		<h3 class="subtitle">Reference List</h3>
+
+		<!-- Using "general_text" class for the title of the reference; users can access the online webpage by clikcing the name of the reference-->
+		<a href="https://sqlity.net/en/2547/sql-injection/" target="_blank"><p class="general_text">"Common Database Vulnerabilities: SQL Injection" (sqlity.net)</p></a>
+		<a href="https://blog.detectify.com/2015/12/16/what-is-cross-site-scripting-and-how-can-you-fix-it/" target="_blank"><p class="general_text">"What is Cross-site Scripting (XSS) and how can you fix it?"" (detectify)</p></a>
+		<a href="https://blog.intigriti.com/hackademy/file-upload-vulnerabilities/" target="_blank"><p class="general_text">"File Upload Vulnerabilities" (intigriti)</p></a>
+	</div>
+
+
+	<!-- This division is a default hidden block for feedback. When the "feedback" button is clicked, this region will be shown -->
+	<div class="text_region" id="feedback_block" style="display: none;">
+		<!-- Using "subtitle" class for the title of the feedback block -->
+		<h3 class="subtitle">Feedbacks</h3>
+
+		<!-- A text that informs users this is a feedback section -->
+		<p class="general_text">This is a feedback section where your can email the author of this webpage and share your feedbacks or concerns!</p>
+
+		<br>
+		<br>
+
+		<!-- A form for submitting user's concerns and feedbacks. Displayed when the "feedback" button is clicked -->
+		<form>
+			<!-- All the elements in the feedback section is centered -->
+			<center>
+
+			<!-- A text-input duo for users to input their optional email address-->
+			<label for="email" class="input_label">Your e-mail (optional)</label><br>
+		  	<input type="text" id="email" name="email" placeholder="Your email..." class="input_text"><br>
+
+		  	<!-- A text-input duo for users to input their Feedbacks-->
+		  	<label for="feedback" class="input_label">Comments / Feedbacks / Questions</label><br>
+		  	<input type="text" id="feedback" name="feedback" placeholder="Your comments..." class="input_text"><br>
+
+		  	<!-- A button that calls the submission function, informing users that their input has been recorded -->
+		  	<input type="submit" value="Submit" onclick="submit_Feedback()" class="input_submit">
+		  </center>
+		</form> 
+
+	</div>
+
+		<br>
+		<br>
+
+</body>
+
+<!-- This sections define all the functions (in javascript) used by the buttons in this webpage -->
+<script type="text/javascript">
+
+	//This function hides the blocks of feedback by setting its "display" attribute to "none", then displays the reference block by setting the "display" attribute to "block"
+	function Reference(){
+		var obj_ref = document.getElementById("ref_block");
+		obj_ref.style.display = "block";
+		var obj_fed = document.getElementById("feedback_block");
+		obj_fed.style.display = "none";
+
+		//Inform users that the reference block has been displayed below the buttons
+		window.alert("The reference list has been displayed below the buttons!");
+	}
+
+	//This function hides the blocks of reference by setting its "display" attribute to "none", then displays the feedback block by setting the "display" attribute to "block"
+	function Feedback(){
+		var obj_ref = document.getElementById("ref_block");
+		obj_ref.style.display = "none";
+		var obj_fed = document.getElementById("feedback_block");
+		obj_fed.style.display = "block";
+
+		//Inform users that the feedback block has been displayed below the buttons
+		window.alert("The feedback window has been displayed below the buttons!");
+	}
+
+	//This function is called by the button in the feedback block, informing users that their feedback has been recorded.
+	function submit_Feedback(){
+		window.alert("Your submission has been recorded!");
+	}
+
+</script>
+
+
+
+</html>

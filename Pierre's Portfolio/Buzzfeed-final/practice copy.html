@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="quiz.css">
+	<title>Practice</title>
+</head>
+
+
+
+
+<body>
+
+
+
+	<!-- this is a (funny) practice question -->
+	<!-- I use all "h2" tags for the title of each question -->
+	<center><h1 class="nochange">Practice Question</h1></center>
+	<div class="bacolor">
+
+	<p>This is a (funny) practice question you can do before taking the real quiz. Lol</p>
+
+	<h2>After observing the picture, guess what animation character is this?</h2>
+
+	<img src="practice1.jpeg">
+	<form>
+		<br>
+		<input type="radio" name="elective" id="pr_1">
+		<label for="pr_1">Peppa Pig</label><br>
+		<input type="radio" name="elective" id="pr_2">
+		<label for="pr_2">Snow White</label><br>
+		<input type="radio" name="elective" id="pr_3">
+		<label for="pr_3">Winnie the Pooh</label><br>
+		<input type="radio" name="elective" id="pr_4">
+		<label for="pr_4">Mickey Mouse</label><br>
+		<input type="button" name="submit button" value="Submit" onclick="practiceButton()">
+
+	</form>
+	<!-- display is none set on defalut-->
+	<div id ="ans" style="display:none">
+		<h2>Here's the answer!</h2>
+		<img src="practice2.jpeg">
+		<a href="main.html"><p>Back to Main</p></a>
+	</div>
+</div>
+
+</body>
+
+<!-- The funciton below is used for the practice question-->
+
+<script type="text/javascript">
+	function practiceButton(){
+
+		 var x = document.getElementById("ans");
+		 x.style.display = "none";
+
+		if (document.getElementById("pr_1").checked){
+			window.alert("You're wrong! Try Again.");
+		}
+		if (document.getElementById("pr_2").checked){
+			window.alert("You're wrong! Try Again.");
+		}
+		if (document.getElementById("pr_3").checked){
+			window.alert("You're right! Yes, this is Winnie Pooh");
+			x.style.display = "block";
+
+		}
+		if (document.getElementById("pr_4").checked){
+			window.alert("You're wrong! Try Again.");
+		}
+
+
+	}
+
+</script>
+
+
+
+
+</html>
